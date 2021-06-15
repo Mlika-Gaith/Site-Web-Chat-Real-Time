@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    box-sizing: border-box; /** include padding and border in an elment height an width**/
+    margin: 0;
+    padding:0;
+    font-family: 'Overpass', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+}
+
+body{
+    background: #242423;
+}
+
+
+.__navbar{
+    background: #242423;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top:0;
+    z-index: 999; /*Crazy Value so it's always in front*/
+}
+
+.navbar__container{
+    display:flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+#navbar__logo img{
+    height:180px;
+}
+.main{
+    background-color: #242423;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.__wrapper{
+    height:auto;
+    width:450px;
+    max-width:450px;
+    margin:50px 50px;
+    border-radius: 16px;
+    box-shadow:5px 5px 10px #000000,
+               -5px -5px 10px #000000;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.chat__area header {
+    display:flex;
+    align-items: center;
+    padding: 18px 30px;
+
+}
+
+.chat__area header img{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    box-shadow: 2px 2px 5px #000000,
+               -2px -2px 5px #000000;
+}
+
+.chat__area header a i{
+    color:#faf9f9;
+    font-size: 18px;
+}
+
+.chat__area header span{
+    font-size: 17px;
+}
+
+.chat__area header .__details{
+    color:#faf9f9;
+    width:100%;
+}
+
+.chat__box{
+    height:450px;
+    background:#232526;
+    padding: 10px 10px 20px 10px;
+    overflow-y: auto;
+}
+
+.chat__box::-webkit-scrollbar{
+    width:0px;
+}
+
+.chat__box .chat{
+    margin: 20px;
+    
+}
+
+.chat__box .chat p{
+    word-wrap: break-word;
+    padding: 10px 16px;
+    box-shadow: 2px 2px 5px #000000,
+               -2px -2px 5px #000000;
+}
+
+.chat__box .sender{
+    display: flex;
+}
+
+.chat__box .__details{
+    margin-left: auto;
+    max-width: calc(100% -130px);
+}
+
+.sender .__details p{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #faf9f9;
+    border-radius: 18px 18px 0px 18px;
+}
+
+.chat__box .destination{
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat__box .destination img{
+    height:35px;
+    width:35px;
+    border-radius: 50%;
+}
+
+.destination .__details{
+    margin-left:10px;
+    margin-right: auto;
+    max-width: calc(100% - 120px);
+}
+
+.destination .__details p{
+    background: #242423;
+    color:#faf9f9;
+    border-radius: 18px 18px 18px 0px;
+}
+
+.chat__area .typing__area{
+    padding: 18px 30px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.typing__area input[type="text"]{
+    height:45px;
+    width: calc(100% - 58px);
+    border:1px solid #232526 ;
+    outline:none;
+    padding: 2px 13px;
+    border-radius:5px;
+    box-shadow: 2px 2px 5px #000000,
+               -2px -2px 5px #000000;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: ease all 0.4s;
+    font-size:17px;
+    color:#faf9f9;
+    pointer-events: auto;
+    
+}
+.typing__area input[type="text"]:focus{
+    box-shadow: none;
+}
+
+.typing__area button{
+    width:55px;
+    height:45px;
+    border:none;
+    outline:none;
+    border-radius: 0px 5px 5px 0;
+    box-shadow: 2px 2px 5px #000000,
+               -2px -2px 5px #000000;
+    cursor:pointer;
+   background: #000000;
+    color:#faf9f9;
+    font-size: 15px;
+}
+
+/*Footer css**/
+
+footer{
+    padding:2rem 0;
+    background-color:#242423;
+    width:100%;
+    margin:0 auto;
+    padding-top: 1rem;
+    color:#faf9f9;
+}
+
+.footer__bottom{
+    height:100%;
+    width:100%;
+    padding:20px 0;
+    text-align: center;
+}
+
+.footer__bottom p{
+    font-size:14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer__bottom span{
+    text-transform: uppercase;
+    opacity:.7;
+    font-weight: 300;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 550px){
+    #navbar__logo img{
+        height:140px;
+    }
+    .footer__bottom{
+        padding:10px 0;
+    }
+    .footer__bottom p{
+        font-size: 10px;
+    }
+    .footer__bottom span{
+        font-size:14px
+    }
+    .__wrapper{
+        max-width:300px;
+        margin:10px 10px;
+    }
+
+    .chat__area header{
+        padding:10px 20px;
+    }
+    .chat__area header img{
+        height:40px;
+        width:40px;
+    }
+    .chat__area header a i {
+        font-size:14px;
+    }
+
+    .chat__area header span{
+        font-size:14px;
+    }
+    .chat__area header .__details{
+        font-size: 15px;
+    }
+
+    .chat__box{
+        height: 350px;
+        padding: 8px 8px 15px 8px;
+    }
+    .chat__box .chat{
+        margin:15px;
+    }
+    .chat__box .chat p{
+        font-size: 12px;
+    }
+    .chat__box .__details{
+        max-width: calc(100% - 80px);
+    }
+
+    .chat__box .destination img{
+        height: 30px;
+        width:30px;
+    }
+
+    .chat__area .typing__area{
+        padding: 18px 20px;
+    }
+
+    .typing__area input[type="text"]{
+        height:30px;
+        padding:2px 8px;
+        font-size: 12px;
+        width: calc(100% - 45px);
+    }
+
+    .typing__area button{
+        width:40px;
+        height:32px;
+        box-shadow: none;
+        border-radius: 5px 5px 5px 0px;
+        font-size:13px;
+    }
+
+}
+@media screen and (max-width: 300px){
+    .chat__box .__details{
+        max-width: calc(100% - 30px);
+    }
+}
+
