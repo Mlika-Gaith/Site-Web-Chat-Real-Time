@@ -6,4 +6,7 @@ un site développé en utilisant HTML 5 \ CSS  et JavaScript (développement Fro
 
 
 
-** index.php : ![Screenshot (3)](https://user-images.githubusercontent.com/85968443/157959233-a136d16d-d0a8-4e12-8a8e-2e0f84e4cbeb.png)
+** index.php : 
+
+
+![Screenshot (3)](https://user-images.githubusercontent.com/85968443/157959233-a136d16d-d0a8-4e12-8a8e-2e0f84e4cbeb.png)
